@@ -23,3 +23,7 @@ tree.export_graphviz(clf, out_file=dot_data,
                     )
 graph = pydot.graph_from_dot_data(dot_data.getvalue())
 graph[0].write_pdf("test.pdf")
+
+z=np.array([[1,1]])
+a=clf.predict(z)
+print(a)
