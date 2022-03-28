@@ -15,9 +15,13 @@ import graphviz
 #from sklearn.externals.six import StringIO
 from six import StringIO
 import pydot
-
+from sklearn.datasets import load_iris
+#iris=load_iris()
+#print(iris.target_names)
+#input()
 dot_data = StringIO()
 tree.export_graphviz(clf, out_file=dot_data,
+                         class_names=["0","1"],
                          filled=True, rounded=True,
                          special_characters=True
                     )
